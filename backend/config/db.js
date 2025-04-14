@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/JobSearch", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect("mongodb://localhost:27017/JobSearch");
     console.log('MongoDB Connected');
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);

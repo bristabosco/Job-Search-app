@@ -1,34 +1,33 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const HRProfileSchema = new mongoose.Schema({
     name:{
         type:String,
-
     },
     email:{
         type:String,
         required:true,
-        unique:true,
-    },
-    role:{
-        type:String,
-        
+        unique:true
     },
     password:{
         type:String,
         required:true
     },
+    role:{
+        type:String,
+        
+    },
     phone:{
         type:String,
+       
+    },
+    company:{
+        type:String,
+       
     },
     image:{
         type:String,
-
-    },
-    resume:{
-        type:String,
-
-    },
+    }
 })
 
-module.exports = mongoose.model('User',userSchema)
+module.exports= mongoose.model('HRProfile',HRProfileSchema)
